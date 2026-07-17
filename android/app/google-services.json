@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1056364468324",
+    "firebase_url": "https://tiktok-ec59d-default-rtdb.firebaseio.com",
+    "project_id": "tiktok-ec59d",
+    "storage_bucket": "tiktok-ec59d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056364468324:android:ff8c0c6a59dce0ea2aa771",
+        "android_client_info": {
+          "package_name": "com.example.stylish_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDetlUc4NiQFZjAJOuuS9vrwnqraWsOzpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056364468324:android:52baf44b83a75e2e2aa771",
+        "android_client_info": {
+          "package_name": "com.example.test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDetlUc4NiQFZjAJOuuS9vrwnqraWsOzpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

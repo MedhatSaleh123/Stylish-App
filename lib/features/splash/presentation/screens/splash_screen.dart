@@ -11,10 +11,14 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
+    goToOnboardingPage();
+    super.initState();
+  }
+
+  void goToOnboardingPage() {
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.of(context).pushReplacementNamed(AppName.onBoarding);
     });
-    super.initState();
   }
 
   @override

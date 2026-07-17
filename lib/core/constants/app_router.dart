@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:stylish_app/features/login/presentation/screens/login_screen.dart';
+import 'package:stylish_app/features/auth/presentation/screens/forgot_password_screen.dart';
+import 'package:stylish_app/features/auth/presentation/screens/login_screen.dart';
+import 'package:stylish_app/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:stylish_app/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:stylish_app/features/splash/presentation/screens/splash_screen.dart';
 
@@ -12,6 +14,10 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
       case AppName.login:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
+      case AppName.signUp:
+        return MaterialPageRoute(builder: (_) => const SignUpScreen());
+      case AppName.forgotPassword:
+        return MaterialPageRoute(builder: (_) => const ForgotPasswordScreen());
 
       default:
         return MaterialPageRoute(
@@ -26,4 +32,6 @@ class AppName {
   static const splash = "/splash";
   static const onBoarding = "/onBoarding";
   static const login = "/login";
+  static const signUp = "/signUp";
+  static const forgotPassword = "/forgotPassword";
 }

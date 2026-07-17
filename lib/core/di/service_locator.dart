@@ -3,11 +3,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stylish_app/features/onboarding/onboarding_dependency.dart';
 
 final sl = GetIt.instance;
-
 Future<void> init() async {
-  final sharedPreferences = await SharedPreferences.getInstance();
+  final prefs = await SharedPreferences.getInstance();
 
-  sl.registerLazySingleton<SharedPreferences>(() => sharedPreferences);
-
+  sl.registerLazySingleton<SharedPreferences>(() => prefs);
   initOnBoarding();
 }

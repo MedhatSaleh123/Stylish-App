@@ -73,6 +73,10 @@ flutter:
   assets:
     - assets/signup_and_signin/
     - assets/splash/
+    - assets/home/
+    - assets/profile/
+    - assets/shop/
+    - assets/trending_product/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

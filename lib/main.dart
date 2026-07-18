@@ -7,6 +7,7 @@ import 'firebase_options.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   await init();
   runApp(StylishApp());
 }
@@ -20,7 +21,7 @@ class StylishApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       onGenerateRoute: AppRouter.onGenerateRoute,
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-      initialRoute: AppName.splash,
+      initialRoute: AppName.home,
     );
   }
 }

@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:stylish_app/features/auth/presentation/screens/forgot_password_screen.dart';
 import 'package:stylish_app/features/auth/presentation/screens/login_screen.dart';
 import 'package:stylish_app/features/auth/presentation/screens/sign_up_screen.dart';
+import 'package:stylish_app/features/get_started/presentation/screens/get_started_screen.dart';
 import 'package:stylish_app/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:stylish_app/features/splash/presentation/screens/splash_screen.dart';
+
+import '../../features/home/presentation/screens/home_screen.dart';
 
 class AppRouter {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -18,6 +21,10 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const SignUpScreen());
       case AppName.forgotPassword:
         return MaterialPageRoute(builder: (_) => const ForgotPasswordScreen());
+      case AppName.getStarted:
+        return MaterialPageRoute(builder: (_) => const GetStartedScreen());
+      case AppName.home:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
 
       default:
         return MaterialPageRoute(
@@ -34,4 +41,6 @@ class AppName {
   static const login = "/login";
   static const signUp = "/signUp";
   static const forgotPassword = "/forgotPassword";
+  static const getStarted = "/getStarted";
+  static const home = "/home";
 }

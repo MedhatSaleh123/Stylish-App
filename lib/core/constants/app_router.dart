@@ -4,7 +4,9 @@ import 'package:stylish_app/features/auth/presentation/screens/login_screen.dart
 import 'package:stylish_app/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:stylish_app/features/get_started/presentation/screens/get_started_screen.dart';
 import 'package:stylish_app/features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'package:stylish_app/features/shop/presentation/screens/shop_screen.dart';
 import 'package:stylish_app/features/splash/presentation/screens/splash_screen.dart';
+import 'package:stylish_app/features/trendingProducts/presentation/screens/trending_products_screen.dart';
 
 import '../../features/home/presentation/screens/home_screen.dart';
 
@@ -25,7 +27,12 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const GetStartedScreen());
       case AppName.home:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
-
+      case AppName.trendingProducts:
+        return MaterialPageRoute(
+          builder: (_) => const TrendingProductsScreen(),
+        );
+      case AppName.shop:
+        return MaterialPageRoute(builder: (_) => const ShopScreen());
       default:
         return MaterialPageRoute(
           builder: (_) =>
@@ -43,4 +50,6 @@ class AppName {
   static const forgotPassword = "/forgotPassword";
   static const getStarted = "/getStarted";
   static const home = "/home";
+  static const trendingProducts = "/trendingProducts";
+  static const shop = "/shop";
 }

@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:stylish_app/features/home/presentation/widgets/small_button.dart';
 
 class CustomTitle extends StatelessWidget {
-  const CustomTitle({super.key});
-
+  const CustomTitle({super.key, required this.text});
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Expanded(
+        Expanded(
           child: Text(
-            "All Featured",
+            text,
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:stylish_app/core/widgets/custom_app_bar.dart';
+import 'package:stylish_app/core/widgets/custom_search_field.dart';
 import 'package:stylish_app/features/home/data/models/home_product_model.dart';
 import 'package:stylish_app/features/home/data/models/product_model1.dart';
 import 'package:stylish_app/features/home/presentation/widgets/category_list_view.dart';
-import 'package:stylish_app/features/home/presentation/widgets/custom_home_app_bar.dart';
-import 'package:stylish_app/features/home/presentation/widgets/custom_title.dart';
 import 'package:stylish_app/features/home/presentation/widgets/home_banner.dart';
 import 'package:stylish_app/features/home/presentation/widgets/hot_summer.dart';
 import 'package:stylish_app/features/home/presentation/widgets/product_card.dart';
 import 'package:stylish_app/features/home/presentation/widgets/promo_card.dart';
-import 'package:stylish_app/features/home/presentation/widgets/search_field.dart';
 import 'package:stylish_app/features/home/presentation/widgets/sponserd_item.dart';
 import 'package:stylish_app/features/home/presentation/widgets/trend_card.dart';
+import '../../../../core/widgets/custom_title.dart';
 import '../widgets/deal_of_day_card.dart';
 import '../widgets/special_offer_card.dart';
 
@@ -27,11 +27,11 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 5),
-              const CustomHomeAppBar(),
+              const CustomAppBar(),
               const SizedBox(height: 20),
-              const SearchField(),
+              const CustomSearchField(),
               const SizedBox(height: 22),
-              CustomTitle(),
+              CustomTitle(text: "All Featured"),
               const SizedBox(height: 20),
               CategoryListView(),
               const SizedBox(height: 20),

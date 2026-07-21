@@ -21,7 +21,7 @@ class StylishApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       onGenerateRoute: AppRouter.onGenerateRoute,
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-      initialRoute: AppName.home,
+      initialRoute: AppName.shop,
     );
   }
 }

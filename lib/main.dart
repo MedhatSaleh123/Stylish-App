@@ -18,10 +18,19 @@ class StylishApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xffF7F7F7),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          surfaceTintColor: Colors.white,
+          scrolledUnderElevation: 0,
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: AppRouter.onGenerateRoute,
-      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-      initialRoute: AppName.shop,
+
+      initialRoute: AppName.checkout,
     );
   }
 }

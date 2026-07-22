@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:stylish_app/features/auth/presentation/screens/forgot_password_screen.dart';
 import 'package:stylish_app/features/auth/presentation/screens/login_screen.dart';
 import 'package:stylish_app/features/auth/presentation/screens/sign_up_screen.dart';
+import 'package:stylish_app/features/checkout/presentation/screens/checkout_screen.dart';
 import 'package:stylish_app/features/get_started/presentation/screens/get_started_screen.dart';
 import 'package:stylish_app/features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'package:stylish_app/features/profile/presenation/screens/profile_screen.dart';
 import 'package:stylish_app/features/shop/presentation/screens/shop_screen.dart';
 import 'package:stylish_app/features/splash/presentation/screens/splash_screen.dart';
 import 'package:stylish_app/features/trendingProducts/presentation/screens/trending_products_screen.dart';
@@ -33,6 +35,10 @@ class AppRouter {
         );
       case AppName.shop:
         return MaterialPageRoute(builder: (_) => const ShopScreen());
+      case AppName.profile:
+        return MaterialPageRoute(builder: (_) => const ProfileScreen());
+      case AppName.checkout:
+        return MaterialPageRoute(builder: (_) => const CheckoutScreen());
       default:
         return MaterialPageRoute(
           builder: (_) =>
@@ -52,4 +58,6 @@ class AppName {
   static const home = "/home";
   static const trendingProducts = "/trendingProducts";
   static const shop = "/shop";
+  static const profile = "/profile";
+  static const checkout = "/checkout";
 }

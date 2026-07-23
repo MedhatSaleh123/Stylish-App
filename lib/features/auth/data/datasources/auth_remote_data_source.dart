@@ -79,33 +79,28 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
     return Future.value(unit);
   }
 
-  // @override
-  // Future<UserCredential> googleAuthentication() {
-  //   // TODO: implement googleAuthentication
-  //   throw UnimplementedError();
-  // }
-
   @override
   Future<UserCredential> googleAuthentication() async {
     FirebaseAuth firebaseInstance = FirebaseAuth.instance;
     await firebaseInstance.currentUser?.reload();
-    // Trigger the authentication flow
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-    // Handle case where the user cancels the sign-in flow
-    if (googleUser == null) {
-      throw NoUserException();
-    }
-    // Obtain the auth details from the request
-    final GoogleSignInAuthentication googleAuth =
-        await googleUser.authentication;
 
-    // Create a new credential
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth.accessToken!,
-      idToken: googleAuth?.idToken,
-    );
     try {
+      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+      if (googleUser == null) {
+        throw NoUserException();
+      }
+
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
+
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+
       return await firebaseInstance.signInWithCredential(credential);
+    } on FirebaseAuthException catch (e) {
+      throw ServerException();
     } catch (e) {
       throw ServerException();
     }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stylish_app/core/widgets/custom_button.dart';
+import 'package:stylish_app/features/auth/presentation/bloc/authentication/auth_bloc.dart';
+import 'package:stylish_app/features/auth/presentation/screens/login_screen.dart';
 import 'package:stylish_app/features/profile/presenation/widgets/change_password_button.dart';
 import 'package:stylish_app/features/profile/presenation/widgets/custom_profile_text_field.dart';
 import 'package:stylish_app/features/profile/presenation/widgets/profile_avatar.dart';
@@ -72,8 +75,23 @@ class _ProfileBodyState extends State<ProfileBody> {
                   ),
                 ),
               ),
-
-              const SizedBox(width: 48),
+              BlocListener<AuthBloc, AuthState>(
+                listener: (context, state) {
+                  if (state is LoggedOutState) {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => const LoginScreen(),
+                      ),
+                    );
+                  }
+                },
+                child: TextButton(
+                  onPressed: () {
+                    BlocProvider.of<AuthBloc>(context).add(LogOutEvent());
+                  },
+                  child: Text("Log out"),
+                ),
+              ),
             ],
           ),
 

@@ -5,8 +5,10 @@ import 'package:stylish_app/features/auth/presentation/screens/sign_up_screen.da
 import 'package:stylish_app/features/checkout/presentation/screens/checkout_screen.dart';
 import 'package:stylish_app/features/get_started/presentation/screens/get_started_screen.dart';
 import 'package:stylish_app/features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'package:stylish_app/features/payment/presentation/screens/payment_screen.dart';
 import 'package:stylish_app/features/profile/presenation/screens/profile_screen.dart';
 import 'package:stylish_app/features/shop/presentation/screens/shop_screen.dart';
+import 'package:stylish_app/features/shopping_bag/presentation/screens/shopping_bag_screen.dart';
 import 'package:stylish_app/features/splash/presentation/screens/splash_screen.dart';
 import 'package:stylish_app/features/trendingProducts/presentation/screens/trending_products_screen.dart';
 
@@ -39,6 +41,10 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
       case AppName.checkout:
         return MaterialPageRoute(builder: (_) => const CheckoutScreen());
+      case AppName.shoppingBag:
+        return MaterialPageRoute(builder: (_) => const ShoppingBagScreen());
+      case AppName.payment:
+        return MaterialPageRoute(builder: (_) => const PaymentScreen());
       default:
         return MaterialPageRoute(
           builder: (_) =>
@@ -48,7 +54,7 @@ class AppRouter {
   }
 }
 
-class AppName {
+abstract class AppName {
   static const splash = "/splash";
   static const onBoarding = "/onBoarding";
   static const login = "/login";
@@ -60,4 +66,6 @@ class AppName {
   static const shop = "/shop";
   static const profile = "/profile";
   static const checkout = "/checkout";
+  static const shoppingBag = "/shoppingBag";
+  static const payment = "/payment";
 }

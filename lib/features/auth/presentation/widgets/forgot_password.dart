@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stylish_app/core/constants/app_router.dart';
+import 'package:stylish_app/core/constants/app_colors.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({super.key});
@@ -13,7 +14,7 @@ class ForgotPassword extends StatelessWidget {
       child: const Text(
         "Forgot Password?",
         style: TextStyle(
-          color: Color(0xffF83758),
+          color: AppColors.primary,
           fontSize: 12,
           fontWeight: FontWeight.w500,
         ),

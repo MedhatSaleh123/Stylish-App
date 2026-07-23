@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:stylish_app/core/constants/app_colors.dart';
 import '../../../../core/constants/app_router.dart';
 import '../cubits/onboarding_cubit.dart';
 
@@ -24,7 +24,7 @@ class NextButton extends StatelessWidget {
           child: Text(
             state.isLastPage ? "Get Started" : "Next",
             style: TextStyle(
-              color: Color(0xffF83758),
+              color: AppColors.primary,
               fontWeight: FontWeight.bold,
               fontSize: 18,
             ),

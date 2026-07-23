@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylish_app/core/constants/app_colors.dart';
 
 class HotSummer extends StatelessWidget {
   const HotSummer({super.key});
@@ -43,7 +44,7 @@ class HotSummer extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.all(10),
-                    backgroundColor: Color(0xffF83758),
+                    backgroundColor: AppColors.primary,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4),
                     ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylish_app/core/constants/app_router.dart';
 import 'package:stylish_app/core/widgets/custom_title.dart';
 import 'package:stylish_app/features/shop/data/models/shop_model.dart';
 import 'package:stylish_app/features/shop/presentation/widgets/action_card.dart';
@@ -49,7 +50,7 @@ class ShopScreen extends StatelessWidget {
                   // Add To Cart
                 },
                 onBuyPressed: () {
-                  // Buy Now
+                  Navigator.of(context).pushNamed(AppName.checkout);
                 },
               ),
 

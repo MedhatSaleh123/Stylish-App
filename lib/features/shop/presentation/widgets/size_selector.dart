@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylish_app/core/constants/app_colors.dart';
 
 class SizeSelector extends StatefulWidget {
   const SizeSelector({super.key, required this.sizes});
@@ -46,11 +47,11 @@ class _SizeSelectorState extends State<SizeSelector> {
                   width: 60,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: isSelected ? const Color(0xffF83758) : Colors.white,
+                    color: isSelected ? AppColors.primary : Colors.white,
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       color: isSelected
-                          ? const Color(0xffF83758)
+                          ? AppColors.primary
                           : Colors.grey.shade300,
                     ),
                   ),

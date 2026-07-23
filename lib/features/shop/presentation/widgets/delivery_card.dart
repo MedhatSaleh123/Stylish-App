@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylish_app/core/constants/app_colors.dart';
 
 class DeliveryCard extends StatelessWidget {
   const DeliveryCard({super.key});
@@ -13,7 +14,7 @@ class DeliveryCard extends StatelessWidget {
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(.04),
+            color: Colors.black.withValues(alpha: .04),
             blurRadius: 8,
             offset: const Offset(0, 3),
           ),
@@ -26,12 +27,12 @@ class DeliveryCard extends StatelessWidget {
             height: 50,
             width: 50,
             decoration: BoxDecoration(
-              color: const Color(0xffF83758).withOpacity(.1),
+              color: AppColors.primary.withOpacity(.1),
               borderRadius: BorderRadius.circular(12),
             ),
             child: const Icon(
               Icons.local_shipping_outlined,
-              color: Color(0xffF83758),
+              color: AppColors.primary,
               size: 28,
             ),
           ),

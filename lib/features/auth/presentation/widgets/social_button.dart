@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylish_app/core/constants/app_colors.dart';
 
 class SocialButton extends StatelessWidget {
   final String image;
@@ -18,7 +19,7 @@ class SocialButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: Color(0xffFCF3F6),
           shape: BoxShape.circle,
-          border: Border.all(color: const Color(0xffF83758)),
+          border: Border.all(color: AppColors.primary),
         ),
 
         child: Padding(

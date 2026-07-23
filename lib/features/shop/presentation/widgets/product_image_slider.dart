@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylish_app/core/constants/app_colors.dart';
 
 class ProductImageSlider extends StatefulWidget {
   const ProductImageSlider({super.key, required this.images});
@@ -141,9 +142,7 @@ class _ProductImageSliderState extends State<ProductImageSlider> {
               height: 8,
               width: selected ? 16 : 8,
               decoration: BoxDecoration(
-                color: selected
-                    ? const Color(0xffF83758)
-                    : Colors.grey.shade300,
+                color: selected ? AppColors.primary : Colors.grey.shade300,
                 borderRadius: BorderRadius.circular(20),
               ),
             );

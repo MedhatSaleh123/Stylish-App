@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylish_app/core/constants/app_colors.dart';
 
 class AreadyHaveAccount extends StatelessWidget {
   const AreadyHaveAccount({
@@ -28,9 +29,9 @@ class AreadyHaveAccount extends StatelessWidget {
           child: Text(
             text2,
             style: TextStyle(
-              decorationColor: Color(0xffF83758),
+              decorationColor: AppColors.primary,
               decoration: TextDecoration.underline,
-              color: Color(0xffF83758),
+              color: AppColors.primary,
               fontWeight: FontWeight.bold,
               fontSize: 15,
             ),

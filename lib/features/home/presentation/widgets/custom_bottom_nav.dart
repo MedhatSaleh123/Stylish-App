@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylish_app/core/constants/app_colors.dart';
 import 'package:stylish_app/features/home/data/models/nav_item_model.dart';
 
 class CustomBottomNav extends StatelessWidget {
@@ -36,8 +37,8 @@ class CustomBottomNav extends StatelessWidget {
                         duration: const Duration(milliseconds: 250),
                         height: 56,
                         width: 56,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
+                        decoration: BoxDecoration(
+                          color: selected ? AppColors.primary : AppColors.white,
                           shape: BoxShape.circle,
                           boxShadow: [
                             BoxShadow(color: Colors.black12, blurRadius: 12),
@@ -48,7 +49,7 @@ class CustomBottomNav extends StatelessWidget {
                             itemsNav[index].icon,
                             width: 24,
                             height: 24,
-                            color: selected ? Colors.red : Colors.black,
+                            color: selected ? AppColors.white : AppColors.black,
                           ),
                         ),
                       ),
@@ -72,7 +73,7 @@ class CustomBottomNav extends StatelessWidget {
                         itemsNav[index].icon,
                         width: 24,
                         height: 24,
-                        color: selected ? Colors.red : Colors.black,
+                        color: selected ? AppColors.primary : AppColors.black,
                       ),
                     ),
                     const SizedBox(height: 4),
@@ -83,7 +84,7 @@ class CustomBottomNav extends StatelessWidget {
                         fontWeight: selected
                             ? FontWeight.w600
                             : FontWeight.w400,
-                        color: selected ? Colors.red : Colors.grey.shade700,
+                        color: selected ? AppColors.primary : AppColors.grey,
                       ),
                     ),
                   ],

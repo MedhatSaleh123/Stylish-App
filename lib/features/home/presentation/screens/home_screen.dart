@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:stylish_app/core/widgets/custom_button.dart';
 import 'package:stylish_app/features/home/presentation/widgets/custom_bottom_nav.dart';
 import 'package:stylish_app/features/home/presentation/widgets/home_page.dart';
+import 'package:stylish_app/features/shop/presentation/screens/shop_screen.dart';
 import 'package:stylish_app/features/trendingProducts/presentation/screens/trending_products_screen.dart';
+
+import '../../../profile/presenation/screens/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,21 +20,13 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> pages = [
     HomePage(),
     TrendingProductsScreen(),
-    Container(
-      width: double.infinity,
-      height: double.infinity,
-      color: Colors.red,
-    ),
+    ShopScreen(),
     Container(
       width: double.infinity,
       height: double.infinity,
       color: Colors.green,
     ),
-    Container(
-      width: double.infinity,
-      height: double.infinity,
-      color: Colors.blue,
-    ),
+    ProfileScreen(),
   ];
 
   @override
